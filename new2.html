@@ -1,0 +1,827 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8418d9c9c2.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles2.css">
+
+    <link rel="stylesheet" href="main2.css">
+    <script src="myscripts.js"></script>
+
+
+    <title>AKAlanka</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Booking.com</a>
+            <button class="navbar-toggler" style="color: aliceblue" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color: aliceblue"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="new.html">Accommodation <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item-active">
+                        <a class="nav-link" href="#">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" id="searchBar">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <button type="submit" class="btn btn-primary btn-sm" id="btn-primary"><i
+                        class="fas fa-search fa-1x"></i></button></li>
+
+                <button type="submit" class="btn btn-primary btn-sm" id="btn-primary"><i
+                        class="fas fa-envelope"></i></button>
+
+
+                <button type="submit" class="btn btn-primary btn-sm" id="btn-primary">
+                    <i class="fas fa-user-circle"></i></button>
+
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                    </a>
+
+                    <form class="dropdown-menu p-4">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail2">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword2">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                                placeholder="Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+        <div class="container" style="margin-top: 100px">
+
+            <div class="navi-id-txt">Laghi di Fusine<br>
+                Italy</div>
+
+            <p></p>
+            <p style="margin-top: 20px"></p>
+
+            <p><small style="color: aliceblue">More information<label style="margin-left:50px"><a href="#"><i
+                                class="fas fa-arrow-right" style="color: aliceblue"></i></a></label></i></small></p>
+
+            <p> <a href="#" id="navisearch1"><u>Ruturn</u></a> <a href="#" id="navisearch2">One way</a> <a href="#"
+                    id="navisearch3">Multi-city</a></p>
+        </div>
+        <div class="container-fluid">
+
+        </div>
+
+
+
+    </header>
+
+    <div class="wrapper wrapper--w1226" style="margin-top: -5ch; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);">
+        <div class="card" id="card-body">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+
+                        <div class="col-sm" id="formbox">
+                            <input type="text" class="form-control" id="nav-form-con" placeholder="">
+
+                        </div>
+                        <div class="col-xsm" id="exchange">
+                            <div class="dropdown">
+                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenu2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropdown-se">
+                                    <button class="dropdown-item" type="button" id="item1"><i
+                                            class="fas fa-flag-usa"></i> <span class="item1"
+                                            id="italy">Italy</span><br><small>Country</small></button>
+                                    <button class="dropdown-item" type="button" id="item2"><i
+                                            class="fas fa-map-marker-alt"></i>
+                                        <label class="item1"
+                                            id="Srilanka">Srilanka</label><br><small>Region</small></button>
+                                    <button class="dropdown-item" type="button" id="item3"><i
+                                            class="fas fa-map-marker-alt"></i><label class="item1"
+                                            id="india">India</label>
+                                        <br><small>Region</small></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm " id="formbox">
+                            <input type="text" class="form-control" id="nav-form-con2" placeholder="">
+                        </div>
+
+
+                        <div class="col-xsm" id="xms1">
+                            <div class="input-group" id="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="depart" placeholder="Depart"
+                                    onfocus="(this.type='date')" onblur="(this.type='text')"
+                                    aria-describedby="inputGroupPrepend" required>
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-xsm" id="line">
+                            <i class="fas fa-arrows-alt-h" id="line"></i>
+                        </div>
+
+                        <div class="col-xsm" id="xms2">
+                            <div class="input-group" id="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="depart" placeholder="Return"
+                                    onfocus="(this.type='date')" onblur="(this.type='text')"
+                                    aria-describedby="inputGroupPrepend" required>
+
+                            </div>
+                        </div>
+                        <div class="col-sm" id="xms2">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" for="inputGroupSelect01"><i
+                                            class="fas fa-user"></i></span>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>1,Adult-Economy</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-xsm" style="margin-right: -5ch">
+                            <div class="col-sm"><button type="button" class="btn btn-primary btn-lg" id="search"><i
+                                        class="fas fa-search fa-1x"></i></button></div>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row text-center mb-3">
+
+        </div>
+        <div class="row">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="card" id="card-img1">
+                                    <div class="card-img" id="card-img" style="background-image: url('img2/s1.svg');">
+                                        <p id="sliderimg1"> Per night </p>
+                                        <p id="sliderimg2"> $ 621 </p>
+                                        <p id=sliderimg3>Hotel<br>
+                                            Venora intourist</p>
+                                        <small style="margin: 10px;color: "><i class="fas fa-location-arrow"
+                                                style="color:white"></i><a href="" style="color: white"><u>Okhotny Rvad.
+                                                    Moscow</u></a></small>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <h5 class="slidertext">Only 2 of these prices left lorem is a dummy
+                                            text which is used for print</h5>
+
+                                        <button type="button"
+                                            class="btn btn-outline-danger btn-block btn-sm">Readmore.AK
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="card" id="card-img1">
+                                    <div class="card-img" id="card-img" style="background-image: url('img2/s2.svg');">
+                                        <p id="sliderimg1"> Per night </p>
+                                        <p id="sliderimg2"> $ 621 </p>
+                                        <p id=sliderimg3>Hotel<br>
+                                            Venora intourist</p>
+                                        <small style="margin: 10px;color: "><i class="fas fa-location-arrow"
+                                                style="color:white"></i><a href="" style="color: white"><u>Okhotny Rvad.
+                                                    Moscow</u></a></small>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <h5 class="slidertext">Only 2 of these prices left lorem is a dummy
+                                            text which is used for print</h5>
+
+                                        <button type="button"
+                                            class="btn btn-outline-danger btn-block btn-sm">Readmore.AK
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="card" id="card-img1">
+                                    <div class="card-img" id="card-img" style="background-image: url('img2/s3.svg');">
+                                        <p id="sliderimg1"> Per night </p>
+                                        <p id="sliderimg2"> $ 621 </p>
+                                        <p id=sliderimg3>Hotel<br>
+                                            Venora intourist</p>
+                                        <small style="margin: 10px;color: "><i class="fas fa-location-arrow"
+                                                style="color:white"></i><a href="" style="color: white"><u>Okhotny Rvad.
+                                                    Moscow</u></a></small>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <h5 class="slidertext">Only 2 of these prices left lorem is a dummy
+                                            text which is used for print</h5>
+
+                                        <button type="button"
+                                            class="btn btn-outline-danger btn-block btn-sm">Readmore.AK
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+                            <div class="row">
+                                    <div class="col-sm">
+                                        <div class="card" id="card-img1">
+                                            <div class="card-img" id="card-img" style="background-image: url('img2/s1.svg');">
+                                                <p id="sliderimg1"> Per night </p>
+                                                <p id="sliderimg2"> $ 621 </p>
+                                                <p id=sliderimg3>Hotel<br>
+                                                    Venora intourist</p>
+                                                <small style="margin: 10px;color: "><i class="fas fa-location-arrow"
+                                                        style="color:white"></i><a href="" style="color: white"><u>Okhotny Rvad.
+                                                            Moscow</u></a></small>
+                                            </div>
+                                            <div class="card-body">
+        
+                                                <h5 class="slidertext">Only 2 of these prices left lorem is a dummy
+                                                    text which is used for print</h5>
+        
+                                                <button type="button"
+                                                    class="btn btn-outline-danger btn-block btn-sm">Readmore.AK
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm">
+                                        <div class="card" id="card-img1">
+                                            <div class="card-img" id="card-img" style="background-image: url('img2/s2.svg');">
+                                                <p id="sliderimg1"> Per night </p>
+                                                <p id="sliderimg2"> $ 621 </p>
+                                                <p id=sliderimg3>Hotel<br>
+                                                    Venora intourist</p>
+                                                <small style="margin: 10px;color: "><i class="fas fa-location-arrow"
+                                                        style="color:white"></i><a href="" style="color: white"><u>Okhotny Rvad.
+                                                            Moscow</u></a></small>
+                                            </div>
+                                            <div class="card-body">
+        
+                                                <h5 class="slidertext">Only 2 of these prices left lorem is a dummy
+                                                    text which is used for print</h5>
+        
+                                                <button type="button"
+                                                    class="btn btn-outline-danger btn-block btn-sm">Readmore.AK
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm">
+                                        <div class="card" id="card-img1">
+                                            <div class="card-img" id="card-img" style="background-image: url('img2/s3.svg');">
+                                                <p id="sliderimg1"> Per night </p>
+                                                <p id="sliderimg2"> $ 621 </p>
+                                                <p id=sliderimg3>Hotel<br>
+                                                    Venora intourist</p>
+                                                <small style="margin: 10px;color: "><i class="fas fa-location-arrow"
+                                                        style="color:white"></i><a href="" style="color: white"><u>Okhotny Rvad.
+                                                            Moscow</u></a></small>
+                                            </div>
+                                            <div class="card-body">
+        
+                                                <h5 class="slidertext">Only 2 of these prices left lorem is a dummy
+                                                    text which is used for print</h5>
+        
+                                                <button type="button"
+                                                    class="btn btn-outline-danger btn-block btn-sm">Readmore.AK
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container" id="container3">
+        <div class="row">
+            <div class="col-sm-8">
+                <p class="container3-head">Our favorite destinations</p>
+            </div>
+            <div class="col-sm-4">
+                <p><i class="fas fa-exclamation-circle fa-1x" style="margin-top: 20px;color: #2472fa;"></i> <b>Indicate
+                        the average price per day per person</b></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="conE1">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="#">
+                            <i class="fas fa-location-arrow " style="color: #2472fa;"></i>
+                            <lable id="conEinside">Four Seasons</lable>
+                        </a><br>
+                        <lable class="conEinside2">Per night lorem ipsum dummy</lable>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <p class="conEinside2" style="text-align: right;margin-top: 5px">Per night</p>
+                        <p class="conEinside3" style="text-align: right;margin-top: 2px">$ 621</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+        <div style=" background-color: #0a0e3d;">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-3 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0" id="bottom-navi"><a href="" id="bottom-navi"> Your account</a></h6>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi"> Booking.com for Business</a></h6>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi">Become an affillate</a></h6>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-3  text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi"> Make changes to your booking online</a></h6>
+                    </div>
+
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi"> Customer Service help</a></h6>
+                    </div>
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+
+
+
+        <!-- Footer Links -->
+        <div style=" background-color:#1E2248;">
+            <div class="container">
+
+                <!-- Grid row -->
+                <div class="row ">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mx-auto mb-4">
+
+                        <!-- Content -->
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Company name</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px;border-color: aliceblue">
+                        <p><a href="#" id="footer-content">Countries</a><br>
+                            <a href="#" id="footer-content">Regions</a><br>
+                            <a href="#" id="footer-content">Cities</a><br>
+                            <a href="#" id="footer-content">Districts</a><br>
+                            <a href="#" id="footer-content">Airports</a><br>
+                            <a href="#" id="footer-content">Places of internet</a><br>
+                            <a href="#" id="footer-content">Hotels</a><br>
+
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Search by category</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px;border-color: aliceblue">
+                        <p><a href="#" id="footer-content">Apartments</a><br>
+                            <a href="#" id="footer-content">Holiday rentals</a><br>
+                            <a href="#" id="footer-content">Resorts</a><br>
+                            <a href="#" id="footer-content">Villas</a><br>
+                            <a href="#" id="footer-content">Guest houses</a><br>
+                            <a href="#" id="footer-content">Hostels</a><br>
+                            <a href="#" id="footer-content">B&Bs</a><br>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Other information</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px;border-color: aliceblue">
+                        <p><a href="#" id="footer-content">About Booking.com</a><br>
+                            <a href="#" id="footer-content">Give website feedback</a><br>
+                            <a href="#" id="footer-content">Customer Service help</a><br>
+                            <a href="#" id="footer-content">Partner help</a><br>
+                            <a href="#" id="footer-content">Careers</a><br>
+                            <a href="#" id="footer-content">Press centre</a><br>
+                            <a href="#" id="footer-content">Investor relations</a><br>
+                            <a href="#" id="footer-content">Statement</a><br>
+                            <a href="#" id="footer-content">Corporate contact</a><br>
+                            <a href="#" id="footer-content">We Price Match</a><br>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 mb-md-0 mb-4">
+
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Booking.com</h6>
+                        <p id="footer-content">Is based in Amsterdam, the Netherlands and is
+                            supported internationally by 198 offices in 70 countries.</p>
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Save time, save money!</h6>
+                        <form>
+                            <div class="form-row align-items-center">
+                                <div class="col-auto">
+                                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control" id="inlineFormInputGroup"
+                                            placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                        <div class="form-check ">
+                            <small>
+                                <input class="form-check-input" type="checkbox" value="" checked> &nbsp; <label
+                                    style="color: aliceblue">Send me a link to get the Free Booking.com app!
+                                </label>
+                            </small>
+                        </div>
+
+
+                        <!-- Links -->
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+            </div>
+
+
+
+            <div class="container" style="margin-top: 10px">
+
+
+                <div class="row">
+
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                        style="width:1000px;border-color: aliceblue">
+
+
+                </div>
+                <p></p>
+
+
+                <p style="text-align: center" id="footer-content"><small>© 2019 Copyright: <a href="#"
+                            id="footer-content">
+                            AKAlanka.com</a><br></small></p>
+            </div>
+            <p style="text-align: center" id="footer-content"><br></p>
+
+
+
+
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+
+
+    <script>   var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/jquery-validate/jquery.validate.min.js"></script>
+    <script src="vendor/bootstrap-wizard/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

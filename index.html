@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8418d9c9c2.js" crossorigin="anonymous"></script>
+    <script src="myscripts.js"></script>
+
+    <script src="ion.rangeSlider.js"></script>
+    <script src="ion.rangeSlider.min.js"></script>
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="ion.rangeSlider.css">
+    <link rel="stylesheet" href="ion.rangeSlider.min.css">
+
+    <style>
+        .irs--flat .irs-line {
+            top: 25px;
+            height: 0px;
+            background-color: black;
+            border-radius: 4px;
+            border: 1px solid;
+        }
+
+        .irs--flat .irs-bar {
+            top: 25px;
+            height: 1px;
+            background-color: #2772ff;
+            border: 1px solid;
+            border-color: #2772ff;
+        }
+
+        .irs--flat .irs-handle>i:first-child {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 50%;
+            height: 0;
+            margin-left: -1px;
+            background-color: #2772ff;
+            border-radius: 100%;
+            border: 5px solid;
+            border-color: #2772ff;
+        }
+
+        .irs--flat .irs-min,
+        .irs--flat .irs-max {
+            top: 10;
+            padding: 1px 3px;
+            color: black;
+            font-family: "Open Sans";
+            font-size: 16px;
+
+            line-height: 1.333;
+            text-shadow: none;
+            background-color: transparent;
+            border-radius: 4px;
+            margin-top: -1ch;
+        }
+
+        .card-text-filterby {
+            color: #000000;
+            font-family: "Open Sans";
+            font-size: 16px;
+
+        }
+
+
+
+
+        .btn-light-activeF {
+            color: #212529;
+            background-color: #2c74fc !important;
+
+
+        }
+
+        .filterbt-bn {
+
+            background-color: transparent;
+            border: 1px solid #707070 !important;
+            color: black;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-weight: 600;
+            margin: 2px;
+
+
+        }
+
+        .slide-2-dis {
+            text-align: right;
+            color: #2c74fc;
+            font-family: "Open Sans";
+            font-size: 16px;
+
+        }
+
+        #filterby2 {
+
+            background-color: #f3f6fb;
+        }
+    </style>
+    <title>AKAlanka</title>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <header>
+        <div class="mynav ">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="bg">
+                <a class="navbar-brand" href="#">Booking.com</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
+                    aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                    <ul class="navbar-nav ">
+                        <li class="nav-itemactive">
+                            <a class="nav-link" id="active" href="">Accommodation <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item-active">
+                            <a class="nav-link" href="new2.html">Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-nav" id="nav-right">
+                        <form id="test1">
+                            <div class="form-row align-items-center">
+                                <div class="col-auto">
+
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control" id="inlineFormInputGroup"
+                                            placeholder="Search">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-primary mb-2">Search</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+
+                        <button type="submit" class="btn btn-primary btn-sm" id="nav-icon"><i
+                                class="fas fa-search fa-1x"></i></button></li>
+
+                        <button type="submit" class="btn btn-primary btn-sm" id="nav-icon"><i
+                                class="fas fa-envelope"></i></button>
+
+
+                        <button type="submit" class="btn btn-primary btn-sm" id="nav-icon"
+                            style="margin-right:-3ch"><img src="img/avatar.svg" class="avatar"></button>
+
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                            </a>
+
+                            <form class="dropdown-menu p-4">
+                                <div class="form-group">
+                                    <label for="exampleDropdownFormEmail2">Email address</label>
+                                    <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                                        placeholder="email@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleDropdownFormPassword2">Password</label>
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                    <label class="form-check-label" for="dropdownCheck2">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+                        </div>
+                        <div><i>Moscow Russia</i><br><a href="#"><small><i>more info</i></small></a></div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+
+            </nav>
+
+            <div class="container">
+                <section>
+                    <h4 id="moscow">Moscow <br>Russia </h4>
+                    <small>More information</small><br>
+                    <small><input type="checkbox" name="vehicle1" value="Bike" checked> <label>I'm traveling for
+                            work</label></small>
+                    <div class="s002" style="margin-top: -2ch">
+                        <form>
+                            <div class="inner-form">
+                                <div class="input-field first-wrap" id="selectLocation">
+                                    <div class="icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <input id="search" type="text" placeholder="What are you looking for?" />
+                                </div>
+                                <div class="input-field second-wrap">
+                                    <div class="icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <input class="datepicker" id="depart" type="text" placeholder="29 Aug 2018" />
+                                </div>
+                                <div class="input-field third-wrap">
+                                    <div class="icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <input class="datepicker" id="return" type="text" placeholder="30 Aug 2018" />
+                                </div>
+                                <div class="input-field fouth-wrap">
+                                    <div class="icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="">2 Adults</option>
+                                        <option>3 Adults</option>
+                                        <option>4 Adults</option>
+                                        <option>5 Adults</option>
+                                    </select>
+                                </div>
+                                <div class="input-field fifth-wrap">
+                                    <button class="btn-search" type="button"><i
+                                            class="fas fa-search fa-1x"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <script src="js/extention/choices.js"></script>
+                    <script src="js/extention/flatpickr.js"></script>
+                    <script>
+                        flatpickr(".datepicker",
+                            {});
+
+                    </script>
+                    <script>
+                        const choices = new Choices('[data-trigger]',
+                            {
+                                searchEnabled: false,
+                                itemSelectText: '',
+                            });
+
+                    </script>
+
+                </section>
+
+
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container" id="container1">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="filterby">Filter by</div>
+
+            </div>
+
+            <div class="col-sm-6">
+                <label class="filterby">Moscow : </label><input type="text" class="form-control-made" disabled
+                    value="4200" /><span class="found">properties found</span>
+
+            </div>
+
+            <div class="col-sm-3">
+                <label class="StyleforSearchby">Searh by :</label> <span class="recommenda">Recommendation</span>
+            </div>
+        </div>
+
+        <p></p>
+        <div class="row">
+            <div class="col-sm-3">
+                <!--sliders-->
+                <p></p>
+                <div class="card" style="width: 16rem; margin-bottom: 2px;">
+                    <div class="card-body" id="filterby2">
+                        <p class="card-text-filterby">Budget per night</p>
+
+                        <input type="text" class="js-range-slider" id="slider1" name="my_range" value="" />
+
+                        <p class="card-text-filterby" style="margin-top: 50px">Frequently use:</p>
+
+
+                        <button type="button" class="filterbt-bn" id="b1">Hotels</button>
+                        <button type="button" class="filterbt-bn" id="b2">Apartments</button>
+                        <button type="button" class="filterbt-bn" id="b3">Hostels</button>
+                        <button type="button" class="filterbt-bn" id="b4">Double bed</button>
+                        <button type="button" class="filterbt-bn" id="b5">24-hour reception</button>
+                        <button type="button" class="filterbt-bn" id="b6">Breakfast Included</button>
+
+                        <!--slider 2-->
+
+                        <p class="card-text-filterby" style="margin-top: 50px"> Review score:</p>
+
+                        <p id="valueslider2" class="slide-2-dis"></P>
+                        <input type="text" class="js-range-slider" id="slider2" name="my_range" value="" />
+
+                        <!--slider 3-->
+                        <p class="card-text-filterby" style="margin-top: 50px">Star rating:</p>
+
+
+                        <input type="text" class="js-range-slider" id="slider3" name="my_range" value="" />
+
+
+
+                    </div>
+                </div>
+                <p></p>
+
+                <!--Google map-->
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 300px">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577325.3482121291!2d36.82510136628262!3d55.581524357416235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoscow%2C%20Russia!5e0!3m2!1sen!2sus!4v1569563851385!5m2!1sen!2sus"
+                        width="600" height="450" frameborder="0" style="border:0;width: 255px;height: 255px;"
+                        allowfullscreen=""></iframe>
+
+                </div>
+
+                <!--Google Maps-->
+
+            </div>
+
+
+
+            <div class="col-sm-9">
+                <!--accommodation-->
+                <p></p>
+
+                <div class="row no-gutters" id="card">
+                    <div class="col-md-4">
+                        <img src="img/Acc1.svg" class="card-img" alt="..">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col-md-10">
+                                    <h5 class="card-title">Four Seasons Hotel Moscow</h5>
+                                    <p class="card-text" id="link"><i class="fas fa-map-marker-alt"></i> <a
+                                            href="#5"><u>Okhotny Rvad. Moscow</u></a>
+                                        <small class="text-muted">( 500 m from centre )</small>
+                                        <p class="card-text">
+                                            <form action="">
+                                                <li class="card-txt">Only 2 of these prices left</li>
+                                                <li class="card-txt">Reservation possible without a credit
+                                                    card.Free cancellation</li>
+                                            </form>
+
+                                        </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <form>
+                                        <input type="text" class="card-rate" value="9.2">
+                                        <p></p>
+                                        <span class="card-reviews">300 reviews</span>
+
+                                    </form>
+                                    <p>
+                                        <div class="prices">$621</div>
+                                        <small class="text-muted" style="opacity: 0.5">Per night</small>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-button-allign">
+                                <button class="card-button" value="See available rooms">See available rooms</button>
+                            </div>
+                            <div class="card-bottom">
+                                <p class="card-text"><small class="text-muted-bottom"><i class="fas fa-mug-hot"></i>
+                                        Breakfast included</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+
+                <p></p>
+
+                <div class="row no-gutters" id="card">
+                    <div class="col-md-4">
+                        <img src="img/Acc2.svg" class="card-img" alt="..">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col-md-10">
+                                    <h5 class="card-title">Hotel Comfort Class</h5>
+                                    <p class="card-text" id="link"><i class="fas fa-map-marker-alt"></i> <a
+                                            href="#5"><u>Aeroport. Moscow</u></a>
+                                        <small class="text-muted">( 8 km from centre )</small>
+                                        <p class="card-text">
+                                            <form action="">
+                                                <li class="card-txt">Only 2 of these prices left</li>
+                                                <li class="card-txt">Reservation possible without a credit
+                                                    card.Free cancellation</li>
+                                            </form>
+
+                                        </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <form>
+                                        <input type="text" class="card-rate" value="8.5">
+                                        <p></p>
+                                        <span class="card-reviews">660 reviews</span>
+
+                                    </form>
+                                    <p>
+                                        <div class="prices">$120</div>
+                                        <small class="text-muted" style="opacity: 0.5">Per night</small>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-button-allign">
+                                <button class="card-button" value="See available rooms">See available rooms</button>
+                            </div>
+                            <div class="card-bottom">
+                                <p class="card-text"><small class="text-muted-bottom"><i class="fas fa-mug-hot"></i>
+                                        Breakfast included</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+
+                <p></p>
+
+                <div class="row no-gutters" id="card">
+                    <div class="col-md-4">
+                        <img src="img/Acc3.svg" class="card-img" alt="..">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col-md-10">
+                                    <h5 class="card-title">Holiday Inn Moscow Sokolniki</h5>
+                                    <p class="card-text" id="link"><i class="fas fa-map-marker-alt"></i> <a
+                                            href="#5"><u>Sokolniki. Moscow</u></a>
+                                        <small class="text-muted">( 500 m from centre )</small>
+                                        <p class="card-text">
+                                            <form action="">
+                                                <li class="card-txt">Only 2 of these prices left</li>
+                                                <li class="card-txt">Reservation possible without a credit
+                                                    card.Free cancellation</li>
+                                            </form>
+
+                                        </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <form>
+                                        <input type="text" class="card-rate" value="9.2">
+                                        <p></p>
+                                        <span class="card-reviews">400 reviews</span>
+
+                                    </form>
+                                    <p>
+                                        <div class="prices">$135</div>
+                                        <small class="text-muted" style="opacity: 0.5">Per night</small>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-button-allign">
+                                <button class="card-button" value="See available rooms">See available rooms</button>
+                            </div>
+                            <div class="card-bottom">
+                                <p class="card-text"><small class="text-muted-bottom"><i class="fas fa-mug-hot"></i>
+                                        Breakfast included</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+
+                <p></p>
+
+                <div class="row no-gutters" id="card">
+                    <div class="col-md-4">
+                        <img src="img/Acc4.svg" class="card-img" alt="..">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col-md-10">
+                                    <h5 class="card-title">Hotel Empire</h5>
+                                    <p class="card-text" id="link"><i class="fas fa-map-marker-alt"></i> <a
+                                            href="#5"><u>Begovoy. Moscow</u></a>
+                                        <small class="text-muted">( 500 m from centre )</small>
+                                        <p class="card-text">
+                                            <form action="">
+                                                <li class="card-txt">Only 2 of these prices left</li>
+                                                <li class="card-txt">Reservation possible without a credit
+                                                    card.Free cancellation</li>
+                                            </form>
+
+                                        </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <form>
+                                        <input type="text" class="card-rate" value="9.2">
+                                        <p></p>
+                                        <span class="card-reviews">600 reviews</span>
+
+                                    </form>
+                                    <p>
+                                        <div class="prices">$109</div>
+                                        <small class="text-muted" style="opacity: 0.5">Per night</small>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-button-allign">
+                                <button class="card-button" value="See available rooms">See available rooms</button>
+                            </div>
+                            <div class="card-bottom">
+                                <p class="card-text"><small class="text-muted-bottom"><i class="fas fa-mug-hot"></i>
+                                        Breakfast included</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+
+                <p></p>
+
+                <div class="row no-gutters" id="card">
+                    <div class="col-md-4">
+                        <img src="img/Acc5.svg" class="card-img" alt="..">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col-md-10">
+                                    <h5 class="card-title">Ibis Moscow Dynamo</h5>
+                                    <p class="card-text" id="link"><i class="fas fa-map-marker-alt"></i> <a
+                                            href="#5"><u>Horoshovsky. Moscow</u></a>
+                                        <small class="text-muted">( 6 km from centre )</small>
+                                        <p class="card-text">
+                                            <form action="">
+                                                <li class="card-txt">Only 2 of these prices left</li>
+                                                <li class="card-txt">Reservation possible without a credit
+                                                    card.Free cancellation</li>
+                                            </form>
+
+                                        </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <form>
+                                        <input type="text" class="card-rate" value="8.2">
+                                        <p></p>
+                                        <span class="card-reviews"> 1,600reviews</span>
+
+                                    </form>
+                                    <p>
+                                        <div class="prices">$621</div>
+                                        <small class="text-muted" style="opacity: 0.5">Per night</small>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-button-allign">
+                                <button class="card-button" value="See available rooms">See available rooms</button>
+                            </div>
+                            <div class="card-bottom">
+                                <p class="card-text"><small class="text-muted-bottom"><i class="fas fa-mug-hot"></i>
+                                        Breakfast included</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+
+                <p></p>
+
+                <div class="row no-gutters" id="card">
+                    <div class="col-md-4">
+                        <img src="img/Acc6.svg" class="card-img" alt="..">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col-md-10">
+                                    <h5 class="card-title">Proton Business Hotel</h5>
+                                    <p class="card-text" id="link"><i class="fas fa-map-marker-alt"></i> <a
+                                            href="#5"><u>Okhotny Ryad. Moscow</u></a>
+                                        <small class="text-muted">( 6 km from centre )</small>
+                                        <p class="card-text">
+                                            <form action="">
+                                                <li class="card-txt">Only 2 of these prices left</li>
+                                                <li class="card-txt">Reservation possible without a credit
+                                                    card.Free cancellation</li>
+                                            </form>
+
+                                        </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <form>
+                                        <input type="text" class="card-rate" value="9.2">
+                                        <p></p>
+                                        <span class="card-reviews">1.700 reviews</span>
+
+                                    </form>
+                                    <p>
+                                        <div class="prices">$621</div>
+                                        <small class="text-muted" style="opacity: 0.5">Per night</small>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-button-allign">
+                                <button class="card-button" value="See available rooms">See available rooms</button>
+                            </div>
+                            <div class="card-bottom">
+                                <p class="card-text"><small class="text-muted-bottom"><i class="fas fa-mug-hot"></i>
+                                        Breakfast included</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+
+
+
+
+                <!--pagenavi not perfect-->
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-sm-12 ">
+                            <button type="button" class="btn btn-secondary " id="bottompagi2"><i
+                                    class="fas fa-arrow-left"></i></button>
+
+                            <div class="d-flex justify-content-center" style="margin-top: 50px">
+                                <nav id="paginavi">
+                                    <ul class="pagination pagination-lg">
+                                        <li class="page-item">
+                                            <a href="#" class="page-link" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">6</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">7</a></li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+
+                            <button type="button" class="btn btn-secondary " id="bottompagi1"><i
+                                    class="fas fa-arrow-right"></i></button>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <p></p>
+    <p></p>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+        <div style=" background-color: #0a0e3d;">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-3 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0" id="bottom-navi"><a href="" id="bottom-navi"> Your account</a></h6>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi"> Booking.com for Business</a></h6>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi">Become an affillate</a></h6>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-3  text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi"> Make changes to your booking online</a></h6>
+                    </div>
+
+                    <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0"><a href="" id="bottom-navi"> Customer Service help</a></h6>
+                    </div>
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div style=" background-color:#1E2248;">
+            <div class="container">
+
+                <!-- Grid row -->
+                <div class="row ">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mx-auto mb-4">
+
+                        <!-- Content -->
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Company name</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px;border-color: aliceblue">
+                        <p><a href="#" id="footer-content">Countries</a><br>
+                            <a href="#" id="footer-content">Regions</a><br>
+                            <a href="#" id="footer-content">Cities</a><br>
+                            <a href="#" id="footer-content">Districts</a><br>
+                            <a href="#" id="footer-content">Airports</a><br>
+                            <a href="#" id="footer-content">Places of internet</a><br>
+                            <a href="#" id="footer-content">Hotels</a><br>
+
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Search by category</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px;border-color: aliceblue">
+                        <p><a href="#" id="footer-content">Apartments</a><br>
+                            <a href="#" id="footer-content">Holiday rentals</a><br>
+                            <a href="#" id="footer-content">Resorts</a><br>
+                            <a href="#" id="footer-content">Villas</a><br>
+                            <a href="#" id="footer-content">Guest houses</a><br>
+                            <a href="#" id="footer-content">Hostels</a><br>
+                            <a href="#" id="footer-content">B&Bs</a><br>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Other information</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px;border-color: aliceblue">
+                        <p><a href="#" id="footer-content">About Booking.com</a><br>
+                            <a href="#" id="footer-content">Give website feedback</a><br>
+                            <a href="#" id="footer-content">Customer Service help</a><br>
+                            <a href="#" id="footer-content">Partner help</a><br>
+                            <a href="#" id="footer-content">Careers</a><br>
+                            <a href="#" id="footer-content">Press centre</a><br>
+                            <a href="#" id="footer-content">Investor relations</a><br>
+                            <a href="#" id="footer-content">Statement</a><br>
+                            <a href="#" id="footer-content">Corporate contact</a><br>
+                            <a href="#" id="footer-content">We Price Match</a><br>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 mb-md-0 mb-4">
+
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Booking.com</h6>
+                        <p id="footer-content">Is based in Amsterdam, the Netherlands and is
+                            supported internationally by 198 offices in 70 countries.</p>
+                        <h6 class="text-uppercase font-weight-bold" id="footer-header">Save time, save money!</h6>
+                        <form>
+                            <div class="form-row align-items-center">
+                                <div class="col-auto">
+                                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control" id="inlineFormInputGroup"
+                                            placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                                </div>
+                            </div>
+                            <div><small>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                                            checked>
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Send me a link to get the Free Booking.com app!
+                                        </label>
+                                </small></div>
+                        </form>
+
+
+                        <!-- Links -->
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+            </div>
+
+
+            <div class="container">
+
+
+                <div class="row">
+
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                        style="width:1000px;border-color: aliceblue">
+
+
+                </div>
+                <p></p>
+
+                <p style="text-align: center" id="footer-content"><small>© 2019 Copyright: <a href="#"
+                            id="footer-content">
+                            AKAlanka.com</a><br></</p> </div> <p style="text-align: center" id="footer-content"><br></p>
+
+
+
+
+            </div>
+    </footer>
+    <!-- Footer -->
+
+    <script>
+
+        $(document).ready(function () {
+            $("#test1").hide();
+            $("#nav-icon:first").on("click", function () {
+                $("#test1").toggle();
+
+            });
+
+        });
+
+        $(document).ready(function () {
+
+            $("#b1").click(function () {
+                $(this).toggleClass("btn-light-activeF");
+
+            });
+
+            $("#b2").click(function () {
+                $(this).toggleClass("btn-light-activeF");
+
+            });
+
+            $("#b3").click(function () {
+                $(this).toggleClass("btn-light-activeF");
+
+            });
+
+            $("#b4").click(function () {
+                $(this).toggleClass("btn-light-activeF");
+
+            });
+
+            $("#b5").click(function () {
+                $(this).toggleClass("btn-light-activeF");
+
+            });
+
+            $("#b6").click(function () {
+                $(this).toggleClass("btn-light-activeF");
+
+            });
+
+
+        });
+
+
+
+        $("#slider2").ionRangeSlider({
+            min: 5.0,
+            max: 10,
+
+        });
+        $("#slider2").on("change", function () {
+            var $this = $(this),
+                value = $this.prop("value").split(";");
+            var minselecte = value[0];
+            var maxselecte = value[1];
+            $("#valueslider2").text("+" + minselecte);
+        })
+        $("#slider2").on("change", function () {
+            var $this = $(this),
+                value = $this.prop("value").split(";");
+            var maxSelecte = value[1];
+            $("valueslider2").text("+" + maxSelecte);
+        })
+
+
+
+        $("#slider1").ionRangeSlider({
+            type: "double",
+            min: 100,
+            max: 750,
+            to: 500,
+            grid: false,
+            prefix: "$"
+        });
+
+        $("#slider3").ionRangeSlider({
+            type: "double",
+            min: +1,
+            max: +5,
+            from: +2,
+            to: +4,
+            grid: true,
+            prefix: "+"
+
+        });
+
+
+        $(document).ready(function () {
+            $(window).on("resize", function (e) {
+                checkScreenSize();
+            });
+
+            checkScreenSize();
+
+
+            function checkScreenSize() {
+                var newWindowWidth = $(window).width();
+                if (newWindowWidth < 481) {
+                    $('#paginavi').hide();
+                    $('#bottompagi2').show();
+                    $('#bottompagi1').show();
+                }
+                else {
+                    $('#bootomnavi').show();
+                    $('#bottompagi2').hide();
+                    $('#bottompagi1').hide();
+                }
+            }
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
